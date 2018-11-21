@@ -120,12 +120,7 @@ $(document).ready(function(){
     });
 
     $("#again").click(function(){ 
-        $(".answers").hide();
-        $(".intro").show();
-        $("input[name='opt']").prop('checked', false);
-        i = 0;
-        score = 0;
-        wrong = [];
+        location.reload();
     });
     
 });
