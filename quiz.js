@@ -22,19 +22,18 @@ $(document).ready(function(){
         $("#warning").html("Du har redan gjort quizen idag! Kom tillbaka imorgon!");
     }else{
         $("#start").prop("disabled", false);
+           $("#start").click(function(){
+            Cookies.set("quiz", "done");
+            $(".intro").hide();
+            $("#sub").show();
+            $(".quiz").show();
+            $("#num").text(i+1+"/"+quelist.length);
+            $("#q").text(quelist[i].que);
+            $("#op1").html("<input type='radio' name='opt' id='o1' value='0'><label for='o1'>"+quelist[i].ans[0])+"</label>";
+            $("#op2").html("<input type='radio' name='opt' id='o2' value='1'><label for='o2'>"+quelist[i].ans[1])+"</label>";
+            $("#op3").html("<input type='radio' name='opt' id='o3' value='2'><label for='o3'>"+quelist[i].ans[2])+"</label>";       
+        });
     }
-
-    $("#start").click(function(){
-        Cookies.set("quiz", "done");
-        $(".intro").hide();
-        $("#sub").show();
-        $(".quiz").show();
-        $("#num").text(i+1+"/"+quelist.length);
-        $("#q").text(quelist[i].que);
-        $("#op1").html("<input type='radio' name='opt' id='o1' value='0'><label for='o1'>"+quelist[i].ans[0])+"</label>";
-        $("#op2").html("<input type='radio' name='opt' id='o2' value='1'><label for='o2'>"+quelist[i].ans[1])+"</label>";
-        $("#op3").html("<input type='radio' name='opt' id='o3' value='2'><label for='o3'>"+quelist[i].ans[2])+"</label>";       
-    });
 
     $("#sub").click(function(){
         if($("input[name='opt']:checked").val()!=null){
