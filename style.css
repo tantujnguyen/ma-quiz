@@ -124,6 +124,14 @@ button:hover{
 
 .disabled {
     background-color: #CCC;
+    border: none;
+    color: #170F09;
+}
+
+#warning{
+    color: #EE1B1B;
+    font-size: 12px;
+    margin-top: 20px;
 }
 
 #more {
