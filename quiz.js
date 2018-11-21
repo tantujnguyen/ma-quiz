@@ -22,8 +22,7 @@ $(document).ready(function(){
         $("#warning").html("Du har redan gjort quizen idag! Kom tillbaka imorgon!");
     }else{
         $("#start").prop("disabled", false);
-           $("#start").click(function(){
-            Cookies.set("quiz", "done");
+        $("#start").click(function(){
             $(".intro").hide();
             $("#sub").show();
             $(".quiz").show();
@@ -50,6 +49,7 @@ $(document).ready(function(){
             }
             else{
                 reslt();
+                Cookies.set("quiz", "done");
             }
         }
         else{
