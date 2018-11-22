@@ -168,7 +168,6 @@ button:hover{
 }
 
 .radio{
-    max-width: 350px;
 }
 
 [type="radio"]:checked,
