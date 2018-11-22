@@ -9,11 +9,14 @@ $(document).ready(function(){
     var right;
     var i=0;
     var score=0;
-    var que1={que:"Vad heter James Bond i efternamn?",ans:["James","Bond","007"],right:"1"};
+    var que1={que:"Vilket av följande påståenden stämmer INTE om Marketing Automation?",
+    ans:["Lätt att mäta och ger möjlighet att följa hela säljprocessen","Ger kunden rätt information vid rätt tidpunkt","När ett Marketing Automation-system väl är implementerat krävs inget mer arbete"],right:"2"};
     var que2={que:"1 + 1 = ?",ans:["11","1","2"],right:"2"};
-    var que3={que:"Vad är det för år nu?",ans:["2018","2019","2017"],right:"0"};
-    var que4={que:"Vad står MA för?",ans:["Marketing Advisor","Marketing Automation","Marketing Agency"],right:"1"};
-    var quelist=[que1,que2,que3,que4];
+    var que3={que:"Vad behöver man utvärdera för att få den bästa möjliga vinsten med sin MA investering?",ans:["Mognadsnivåer av sina processer, system och färdigheter","Årlig budget","Kapacitet av sina anställda"],right:"0"};
+    var que4={que:"Vad är viktigt i en bra marketing automation kampanj?",ans:["Att kampanjen är utformad för att passa alla - 'one size fits all'","Att ha tydliga mål och delmål för att prospects ska flyttas längre ner i funneln","Att enbart satsa på en kanal, tex e-post"],right:"1"};
+    var que5={que:"Vilka fyra nyckelegenskaper ska du leta efter hos en kandidat?",ans:["Ledarskap, empatisk förmåga, skrivkunskap och proaktivitet","Resultat driven, empatisk förmåga, analytisk och kreativ","Empatisk förmåga, kreativ, analytiskt tankesätt och tekniskt lagd"],right:"2"};
+    var que6={que:"Vad bör du tänka på först vid val av MA-system?",ans:["Bäst omdöme om systemet","Support hos systemleverantören","Lägsta startavgift"],right:"1"};
+    var quelist=[que1,que2,que3,que4,que5];
     var wrong=[];
 
     if(Cookies.get("quiz") == "done"){
@@ -49,7 +52,7 @@ $(document).ready(function(){
             }
             else{
                 reslt();
-                Cookies.set("quiz", "done");
+                Cookies.set("quiz", "done", { expires: 1/1440 });
             }
         }
         else{
@@ -76,11 +79,11 @@ $(document).ready(function(){
         if(score<=3){
             $(".message").text("Oj, du kanske borde plugga lite mer... 🤓");
         }
-        else if(score<5){
+        else if(score<6){
             $(".message").text("Du var ganska bra där! 🤗");
         }
         else{
-            $(".message").text("You rock! 😎");
+            $(".message").text("You nailed it! 😎");
         }
     }
     $("#an").click(function(){
@@ -120,6 +123,13 @@ $(document).ready(function(){
     });
 
     $("#again").click(function(){ 
+        $(".answers").hide();
+        $(".intro").show();
+        $("input[name='opt']").prop('checked', false);
+        i = 0;
+        score = 0;
+        wrong = [];
+
         location.reload();
     });
     
