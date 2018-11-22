@@ -16,7 +16,7 @@ $(document).ready(function(){
     var que4={que:"Vad är viktigt i en bra marketing automation kampanj?",ans:["Att kampanjen är utformad för att passa alla - 'one size fits all'","Att ha tydliga mål och delmål för att prospects ska flyttas längre ner i funneln","Att enbart satsa på en kanal, tex e-post"],right:"1"};
     var que5={que:"Vilka fyra nyckelegenskaper ska du leta efter hos en kandidat?",ans:["Ledarskap, empatisk förmåga, skrivkunskap och proaktivitet","Resultat driven, empatisk förmåga, analytisk och kreativ","Empatisk förmåga, kreativ, analytiskt tankesätt och tekniskt lagd"],right:"2"};
     var que6={que:"Vad bör du tänka på först vid val av MA-system?",ans:["Bäst omdöme om systemet","Support hos systemleverantören","Lägsta startavgift"],right:"1"};
-    var quelist=[que1,que2,que3,que4,que5];
+    var quelist=[que1,que2,que3,que4,que5,que6];
     var wrong=[];
 
     if(Cookies.get("quiz") == "done"){
@@ -79,7 +79,7 @@ $(document).ready(function(){
         if(score<=3){
             $(".message").text("Oj, du kanske borde plugga lite mer... 🤓");
         }
-        else if(score<6){
+        else if(score<5){
             $(".message").text("Du var ganska bra där! 🤗");
         }
         else{
