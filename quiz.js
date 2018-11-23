@@ -11,7 +11,7 @@ $(document).ready(function(){
     var score=0;
     var que1={que:"Vilket av följande påståenden stämmer INTE om Marketing Automation?",
     ans:["Lätt att mäta och ger möjlighet att följa hela säljprocessen","Ger kunden rätt information vid rätt tidpunkt","När ett Marketing Automation-system väl är implementerat krävs inget mer arbete"],right:"2"};
-    var que2={que:"1 + 1 = ?",ans:["11","1","2"],right:"2"};
+    var que2={que:"Hur kommer en integrerad sälj- och marknadsavdelning hjälpa ditt företag?",ans:["Öka kundförståelsen, öka dina omkostnader och nå rätt målgrupp vid rätt tid.","Öka dina marknadsintäkter med ge sämre tillväxt.","Ge högre engagemang hos dina anställda och dubbla nöjdkundgarantin."],right:"2"};
     var que3={que:"Vad behöver man utvärdera för att få den bästa möjliga vinsten med sin MA investering?",ans:["Mognadsnivåer av sina processer, system och färdigheter","Årlig budget","Kapacitet av sina anställda"],right:"0"};
     var que4={que:"Vad är viktigt i en bra marketing automation kampanj?",ans:["Att kampanjen är utformad för att passa alla - 'one size fits all'","Att ha tydliga mål och delmål för att prospects ska flyttas längre ner i funneln","Att enbart satsa på en kanal, tex e-post"],right:"1"};
     var que5={que:"Vilka fyra nyckelegenskaper ska du leta efter hos en kandidat?",ans:["Ledarskap, empatisk förmåga, skrivkunskap och proaktivitet","Resultat driven, empatisk förmåga, analytisk och kreativ","Empatisk förmåga, kreativ, analytiskt tankesätt och tekniskt lagd"],right:"2"};
@@ -52,7 +52,7 @@ $(document).ready(function(){
             }
             else{
                 reslt();
-                Cookies.set("quiz", "done", { expires: 1/1440 });
+                Cookies.set("quiz", "done", { expires: 1 });
             }
         }
         else{
